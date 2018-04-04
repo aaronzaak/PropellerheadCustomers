@@ -8,16 +8,19 @@ Architecture:
 
 ## HowTo
 
-![Start](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/start.jpg)
-![New](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/new.jpg)
-![Create](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_cr.jpg)
-![Edit](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_edi.jpg)
-![Delete Preview](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_del.jpg)
-![DeleteConfirm](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_delL.jpg)
+* ![Start](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/start.jpg)
+* ![New](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/new.jpg)
+* ![Create](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_cr.jpg)
+* ![Edit](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_edi.jpg)
+* ![SortinAndFiltering](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/v_filterSort.jpg)
+  * 1 and 2 are sortable collumns
+  * 3 search field
+* ![Delete Preview](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_del.jpg)
+* ![DeleteConfirm](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_delL.jpg)
 
 Tests
-![SimpleUT](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/ut.jpg)
-![MockedUT](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/utC.jpg)
+* ![SimpleUT](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/ut.jpg)
+* ![MockedUT](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/utC.jpg)
 
 
 ### Prerequisites
