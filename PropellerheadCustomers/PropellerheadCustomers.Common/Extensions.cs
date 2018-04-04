@@ -31,5 +31,10 @@ namespace PropellerheadCustomers.Common
 
             foreach (var item in items) item.SetId();
         }
+
+        public static bool InvariantIgnoreCaseContains(this string source, string toCheck)
+        {
+            return source?.IndexOf(toCheck, StringComparison.CurrentCultureIgnoreCase) >= 0;
+        }
     }
 }

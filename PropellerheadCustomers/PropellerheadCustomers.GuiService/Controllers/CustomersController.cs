@@ -4,6 +4,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -24,10 +25,35 @@ namespace PropellerheadCustomers.GuiService.Controllers
             this._dataAccess = dataAccess;
         }
 
-        public async Task<ViewResult> Index()
+        public async Task<ViewResult> Index(string sortOrder, string searchString)
         {
+            this.ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            this.ViewData["NoteCountSortParm"] = sortOrder == "NoteCount" ? "NoteCount_desc" : "NoteCount";
+            this.ViewData["CurrentFilter"] = searchString;
+
             var data = await this._dataAccess.GetCustomerViewDataAccess().GetAll();
-            return this.View(data);
+
+            if (!string.IsNullOrEmpty(searchString)) data = data.Where(customer => customer.Name.InvariantIgnoreCaseContains(searchString));
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    data = data.OrderByDescending(obj => obj.Name);
+                    break;
+                case "NoteCount_desc":
+                    data = data.OrderByDescending(obj => obj.NoteCount);
+                    break;
+                case "NoteCount":
+                    data = data.OrderBy(obj => obj.NoteCount);
+                    break;
+                default:
+                    data = data.OrderBy(obj => obj.Name);
+                    break;
+            }
+
+            var filteredData = data.ToList();
+
+            return this.View(filteredData);
         }
 
         [HttpGet("create")]
@@ -40,7 +66,7 @@ namespace PropellerheadCustomers.GuiService.Controllers
         public async Task<IActionResult> Create([FromForm] CustomerCreateEditModel newCustomer)
         {
             var customer = newCustomer.GetCustomer();
-            customer.CreatedTimestamp=DateTimeOffset.UtcNow;
+            customer.CreatedTimestamp = DateTimeOffset.UtcNow;
 
             var da = this._dataAccess.GetCustomerDataAccess();
             await da.Upsert(customer);
