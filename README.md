@@ -6,25 +6,25 @@ Architecture:
  WebApi     - Asp.NET Core with Kestrel
  Interface  - Razor
 
-## Getting Started
+## HowTo
 
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_cr.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_del.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_delL.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_edi.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/new.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/start.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/ut.jpg)
-(https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/utC.jpg)
+![Start](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/start.jpg)
+![New](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/new.jpg)
+![Create](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_cr.jpg)
+![Edit](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_edi.jpg)
+![Delete Preview](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_del.jpg)
+![DeleteConfirm](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/f_delL.jpg)
+
+Tests
+![SimpleUT](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/ut.jpg)
+![MockedUT](https://github.com/aaronzaak/PropellerheadCustomers/blob/master/img/utC.jpg)
 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* [VisualStudio](https://www.visualstudio.com)
+* [ServiceFabric](https://azure.microsoft.com/en-us/services/service-fabric/)
+* [ASP.NET Core 2.0 MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview)
 
 ## Running the tests
 
